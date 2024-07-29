@@ -1,0 +1,23 @@
+
+
+.st-top-menu_wrapper {
+    position: fixed;
+    top: 15px;
+    justify-content: center;
+    width: 90vw;
+}
+.st-top-menu_item {
+   
+    display: inline;
+    margin: 1vh 1vw;
+    padding: 15px;
+    transition: 0.5s ease-out;
+}
+.st-top-menu_item:hover {
+    cursor: pointer;
+    background-color: var(--bl-yellow);
+    color: var(--bl-black);
+    /* text-decoration: underline; */
+}
+
+
