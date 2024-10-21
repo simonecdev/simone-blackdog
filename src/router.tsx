@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import {
     createBrowserRouter,
     createRoutesFromElements,
+    Navigate,
     Route,
     RouterProvider,
   } from "react-router-dom";
@@ -17,6 +18,7 @@ import NotExists from './pages/NotExists.tsx';
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
+        <Route index element={<Navigate to="/dashboard" replace />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="whoami" element={<Whoami />} />
 
