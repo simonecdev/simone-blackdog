@@ -16,16 +16,16 @@ const Layout = () => {
         { path: "portfolio", label: "Progetti"}
     ];
 
-    const [pageActive, setPageActive] = useState<Map<string, string>>(new Map())
+    // const [pageActive, setPageActive] = useState<Map<string, string>>(new Map())
 
-    // controllo quale pagina è attiva
-    useEffect(() => {
-        const _pageActive = new Map(pageActive);
-        pages.forEach(({ path }) => {
-            _pageActive.set(path, location.pathname === '/' + path ? 'active' : '')
-        })
-        setPageActive(_pageActive);
-    }, [location.pathname])
+    // // controllo quale pagina è attiva
+    // useEffect(() => {
+    //     const _pageActive = new Map(pageActive);
+    //     pages.forEach(({ path }) => {
+    //         _pageActive.set(path, location.pathname === '/' + path ? 'active' : '')
+    //     })
+    //     setPageActive(_pageActive);
+    // }, [location.pathname])
 
 
     return (
@@ -34,11 +34,9 @@ const Layout = () => {
             <div className="st-top-menu_wrapper">
                 {/* menu di top */}
                 {pages.map(({ path, label }) => (
-                    <div key={path} className={"st-top-menu_item " + pageActive.get(path)}>
-                        <NavLink className="st-top-menu_item-link" to={`/${path}`}>
+                        <NavLink className="st-top-menu_item" to={`/${path}`}>
                             {label}
                         </NavLink>
-                    </div>
                 ))}
             </div>
             <div className="std-outlet-container">

@@ -19,10 +19,10 @@
     /* transition: 0.5s ease-out; */
     transition: box-shadow 0.2s linear;
 }
-.st-top-menu_item  .st-top-menu_item-link { 
+.st-top-menu_item { 
     color: white ;
 }
-.st-top-menu_item  .st-top-menu_item-link.active { 
+.st-top-menu_item.active { 
     color: var(--bl-yellow);
 }
 .st-top-menu_item.active {
@@ -31,6 +31,7 @@
 }
 .st-top-menu_item:hover  {
 
+    color: var(--bl-yellow);
     cursor: pointer;
     -webkit-box-shadow: 2px 1px 0px 1px var(--bl-yellow); 
     box-shadow:         2px 1px 0px 1px var(--bl-yellow);
